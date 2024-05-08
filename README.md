@@ -43,8 +43,6 @@ Move to folder bin and run tests:
 cd bin && ./library_test
 ```
 
-Result of work:
-
-![ScreenShot](https://raw.github.com/vovaekb/pointcloud_object_segmenter_lib/main/images/object_segmenter_result.png)
+You can see result of work in directory **images**.
 
 Test example of point cloud is located in directory **test**.
