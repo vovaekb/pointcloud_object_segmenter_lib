@@ -7,8 +7,9 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Werror -Wextra -O2")
-
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wextra -O2")
+# -Werror 
+# -Wall
 
 # PCL
 find_package(PCL 1.3 REQUIRED)
