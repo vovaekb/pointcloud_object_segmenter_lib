@@ -17,14 +17,9 @@ namespace point_cloud_utils {
         // Map point indices to cloud points
         convertPointIndices(raw_indices, point_indices_cloud);
 
-        // for(size_t i = 0; i < raw_indices.size(); i++)
-        // {
-        //     PCL_INFO("point index at %d is %d\n", (int)i, point_indices_cloud->indices[i]);
-        // }
-
         segment(point_indices_cloud);
 
-        PCL_INFO("Object cloud has %d points\n", (int)object_cloud->points.size());
+        PCL_INFO("Object cloud has %d points\n", static_cast<int>(object_cloud->points.size()));
 
         saveResults(result_path);
 
@@ -34,7 +29,7 @@ namespace point_cloud_utils {
         std::cout << "load Point Cloud from file.\n";
         
         pcl::io::loadPCDFile(cloud_file_path, *scene_cloud);
-        PCL_INFO("Scene cloud has %d points\n", (int)scene_cloud->points.size());
+        PCL_INFO("Scene cloud has %d points\n", static_cast<int>(scene_cloud->points.size()));
     }
     
     void ObjectSegmenter::readIndicesFromFile(const std::string& file_path, IntVector& indices_data) const {
@@ -66,11 +61,6 @@ namespace point_cloud_utils {
         for (size_t i = 0; i < raw_indices.size(); ++i) {
             point_indices_cloud->indices[i] = raw_indices[i];
         }
-
-        // for(size_t i = 0; i < raw_indices.size(); i++)
-        // {
-        //     PCL_INFO("point index at %d is %d\n", (int)i, point_indices_cloud->indices[i]);
-        // }
 
     }
     
